@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hamdy</title>
+    <script src="https://kit.fontawesome.com/05115f9275.js" crossorigin="anonymous"></script>
+    <style>
+        nav{
+            text-align: center;
+            background-color: black;
+            color: aliceblue;
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            margin-right: 100px;
+            margin-left: 100px;
+            margin-bottom: 70px;
+        }
+        nav a{
+            color: aliceblue;
+            font-size: large;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .about-me, .Projects, .contact-me{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        .me{
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border: solid;
+            border-color: black;
+            border-width: 5px;
+            padding: 5px;
+        }
+
+        .about-me-paragraph{
+            width: 800px;
+        }
+
+        .empty-div{
+            margin-top: 100px;
+            margin-bottom: 100px;;
+            border: solid;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        header p{
+            text-align: center;
+        }
+        header{
+            font-size: 40px;
+        }
+
+        .contact-me{
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .contact-me ul{
+            display: flex;
+        }
+
+        .icon{
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;font-family: 'Times New Roman', Times, serif; padding-top: 40px; padding-bottom: 20px;">Mohamed Abdelhamid</header>
+    
+    <div>
+        <nav>
+            <a href="#about-me", style="margin-left: 50px;">About me</a></li>
+            <a href="#Projects" class="in-nav", style="margin-left: auto; margin-right: auto;">Projects</a>
+            <a href="#contact-me" class="in-nav", style="margin-right: 50px;">Contact me</a>
+        </nav>
+    </div>
+
+    <main style="height: 350px;">
+        <div class="about-me" id="about-me">
+            <img src="me.jpg" class="me" align="right">
+            <h2>About me</h2>
+            <p class="about-me-paragraph">Hi, I'm a machine learning engineer with 2 years of professional experience. I'm an expert in solving computer vision and natural language processing problems, starting from data collection, annotation, cross-validation, building the model, and ending by optimizing the model, performing error analysis, and hyperparameter tuning. I have worked at Edge vision and Innopolis university as a machine learning engineer.</p>
+            
+            <h3>My main areas of expertise are:</h5>
+            <ul>
+                
+                <li> Python, C++, Java</li>
+                <li> Neural networks, Regression, CNN, Sequence models, K-mean, Object detection, Classification, Segmentation</li>
+                <li> Pytorch, Tensorflow, OpenVINO, OpenCV, SciPy(Numpy, Pandas, etc)</li>
+                <li> Docker, PostgreSQL, MongoDB.</li>
+            </ul>
+        </div>
+
+        <div class="empty-div"></div>
+
+        <div class="Projects" id="Projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>R&D precipitations on road surface segmentation and classification</li>
+                <li>Model that detect and extract numbers from Russian number plates</li>
+                <li>Vehicle detection and tracking model</li>
+                <li>Built a spam classifier using SVM algorithm</li>
+                <li>Telegram chatbot that extract highlighted text from an image</li>
+            </ul>
+        </div>
+
+        <div class="contact-me" id="contact-me">
+            <a class="icon" href="mailto::m.abdelhamid@innopolis.university" id="email"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+            <a class="icon" href="https://github.com/MohamedHamdy28" id="gh-link" style="margin-left: 20px;margin-right: 20px;"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a class="icon" href="https://t.me/hamody28522" id="tg-link"><i class="fa-brands fa-telegram fa-2xl"></i></a>
+            <a class="icon" href="https://www.linkedin.com/in/mohamed-hamdy-6aa599200/" style="margin-left: 20px;"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+        </div>
+    
+    </main>
+    <script>
+
+    </script>
+</body>
+</html>
