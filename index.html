@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Hamdy</title>
-    <script src="https://kit.fontawesome.com/05115f9275.js" crossorigin="anonymous"></script>
+    <title>Mohamed Abdelhamid</title>
     <style>
         nav{
             text-align: center;
@@ -76,27 +75,31 @@
             color: black;
         }
 
+        .comic{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
-
 <body>
     <header style="text-align: center;font-family: 'Times New Roman', Times, serif; padding-top: 40px; padding-bottom: 20px;">Mohamed Abdelhamid</header>
     
     <div>
         <nav>
-            <a href="#about-me", style="margin-left: 50px;">About me</a></li>
-            <a href="#Projects" class="in-nav", style="margin-left: auto; margin-right: auto;">Projects</a>
-            <a href="#contact-me" class="in-nav", style="margin-right: 50px;">Contact me</a>
+            <a href="#about-me" style="margin-left: 50px;">About me</a>
+            <a href="#Projects" class="in-nav" style="margin-left: auto; margin-right: auto;">Projects</a>
+            <a href="#contact-me" class="in-nav" style="margin-right: 50px;">Contact me</a>
         </nav>
     </div>
 
     <main style="height: 350px;">
         <div class="about-me" id="about-me">
-            <img src="me.jpg" class="me" align="right">
+            <img src="me.jpg" class="me" alt="image of me hamody" style="float: right;">
             <h2>About me</h2>
             <p class="about-me-paragraph">Hi, I'm a machine learning engineer with 2 years of professional experience. I'm an expert in solving computer vision and natural language processing problems, starting from data collection, annotation, cross-validation, building the model, and ending by optimizing the model, performing error analysis, and hyperparameter tuning. I have worked at Edge vision and Innopolis university as a machine learning engineer.</p>
-            
-            <h3>My main areas of expertise are:</h5>
+
+            <h3>My main areas of expertise are:</h3>
             <ul>
                 
                 <li> Python, C++, Java</li>
@@ -104,6 +107,7 @@
                 <li> Pytorch, Tensorflow, OpenVINO, OpenCV, SciPy(Numpy, Pandas, etc)</li>
                 <li> Docker, PostgreSQL, MongoDB.</li>
             </ul>
+            
         </div>
 
         <div class="empty-div"></div>
@@ -125,9 +129,37 @@
             <a class="icon" href="https://t.me/hamody28522" id="tg-link"><i class="fa-brands fa-telegram fa-2xl"></i></a>
             <a class="icon" href="https://www.linkedin.com/in/mohamed-hamdy-6aa599200/" style="margin-left: 20px;"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
         </div>
-    
+
+        <div class="comic">
+            <h3 id="img-title">Here should be a comic</h3>
+            <img id="img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="a comic should be here">
+            <p id="date"></p>
+        </div>
     </main>
+
     <script>
+        async function displaycomic(email, img_tag, img_title, date_tag){
+            const params1 = new URLSearchParams();
+            params1.append('email', email)
+            const response1 = await fetch('https://fwd.innopolis.app/api/hw2?' + params1.toString());
+            const id = await response1.json();
+            const params2 = new URLSearchParams();
+            params2.append('num', id)
+            const response2 = await fetch('https://getxkcd.vercel.app/api/comic?' + params2.toString())
+            const data = await response2.json()
+            const {alt, day, img, month, title, year} = data
+            img_tag.src = img;
+            img_tag.alt = alt;
+            img_title.textContent = title;
+            const date = new Date(Date.UTC(year, month, day));
+            date_tag.textContent = 'This image was uploaded on ' + date.toLocaleDateString();
+        }
+        email = 'm.abdelhamid@innopolis.university'
+        const img_tag = document.getElementById('img')
+        const img_title = document.getElementById('img-title')
+        const date_tag = document.getElementById('date')
+        
+        displaycomic(email, img_tag, img_title, date_tag)
 
     </script>
 </body>
