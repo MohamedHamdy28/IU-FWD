@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "name": "hw3",
+  "description": "",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "dependencies": {
+    "estree-walker": "^2.0.2",
+    "function-bind": "^1.1.1",
+    "has": "^1.0.3",
+    "is-core-module": "^2.11.0",
+    "path-parse": "^1.0.7",
+    "picomatch": "^2.3.1",
+    "resolve": "^1.22.1",
+    "rollup": "^3.18.0",
+    "supports-preserve-symlinks-flag": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamedHamdy28/IU-FWD-h1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamedHamdy28/IU-FWD-h1/issues"
+  },
+  "homepage": "https://github.com/MohamedHamdy28/IU-FWD-h1#readme"
+}
