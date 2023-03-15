@@ -1,68 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/4aa6d505df.js" crossorigin="anonymous"></script>
     <title>Mohamed Abdelhamid</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header style="text-align: center;font-family: 'Times New Roman', Times, serif; padding-top: 40px; padding-bottom: 20px;">Mohamed Abdelhamid</header>
-    
-    <div>
-        <nav>
-            <a href="#about-me" style="margin-left: 50px;">About me</a>
-            <a href="#Projects" class="in-nav" style="margin-left: auto; margin-right: auto;">Projects</a>
-            <a href="#contact-me" class="in-nav" style="margin-right: 50px;">Contact me</a>
-        </nav>
-    </div>
-
-    <main style="height: 350px;">
-        <div class="about-me" id="about-me">
-            <img src="me.jpg" class="me" alt="image of me hamody" style="float: right;">
-            <h2>About me</h2>
-            <p class="about-me-paragraph">Hi, I'm a machine learning engineer with 2 years of professional experience. I'm an expert in solving computer vision and natural language processing problems, starting from data collection, annotation, cross-validation, building the model, and ending by optimizing the model, performing error analysis, and hyperparameter tuning. I have worked at Edge vision and Innopolis university as a machine learning engineer.</p>
-
-            <h3>My main areas of expertise are:</h3>
-            <ul>
-                
-                <li> Python, C++, Java</li>
-                <li> Neural networks, Regression, CNN, Sequence models, K-mean, Object detection, Classification, Segmentation</li>
-                <li> Pytorch, Tensorflow, OpenVINO, OpenCV, SciPy(Numpy, Pandas, etc)</li>
-                <li> Docker, PostgreSQL, MongoDB.</li>
-            </ul>
-            
-        </div>
-
-        <div class="empty-div"></div>
-
-        <div class="Projects" id="Projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>R&D precipitations on road surface segmentation and classification</li>
-                <li>Model that detect and extract numbers from Russian number plates</li>
-                <li>Vehicle detection and tracking model</li>
-                <li>Built a spam classifier using SVM algorithm</li>
-                <li>Telegram chatbot that extract highlighted text from an image</li>
-            </ul>
-        </div>
-
-        <div class="contact-me" id="contact-me">
-            <a class="icon" href="mailto::m.abdelhamid@innopolis.university" id="email"><i class="fa-regular fa-envelope fa-2xl"></i></a>
-            <a class="icon" href="https://github.com/MohamedHamdy28" id="gh-link" style="margin-left: 20px;margin-right: 20px;"><i class="fa-brands fa-github fa-2xl"></i></a>
-            <a class="icon" href="https://t.me/hamody28522" id="tg-link"><i class="fa-brands fa-telegram fa-2xl"></i></a>
-            <a class="icon" href="https://www.linkedin.com/in/mohamed-hamdy-6aa599200/" style="margin-left: 20px;"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-        </div>
-
-        <div class="comic">
-            <h3 id="img-title">Here should be a comic</h3>
-            <img id="img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="a comic should be here">
-            <p id="date"></p>
-        </div>
-    </main>
-
-    <script src="dist/bundle.js">
-    </script>
-</body>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
